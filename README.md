@@ -12,6 +12,11 @@ Developer fee is 1%
 
 - Allium
 - Blake (2s)
+- CryptoLightV7    (Aeon)
+- CryptoNightFast  (Masari)
+- CryptoNightHeavy
+- CryptoNightV7    (Monero)
+- Lbk3
 - Lyra2REv2
 - Lyra2z
 - NeoScrypt
@@ -19,6 +24,7 @@ Developer fee is 1%
 - Phi2
 - Skein
 - Skunkhash
+- Stellite
 - Tribus
 
 ## QuickStart
@@ -38,6 +44,11 @@ CryptoDredge -a <ALGO> -o stratum+tcp://<POOL> -u <WALLET_ADDRESS> -p <OPTIONS>
 `-a`, `--algo` Specify algorithm to use
 - `allium`
 - `blake2s`
+- `cryptolightv7` or `aeon`
+- `cryptonightfast` or `masari`
+- `cryptonightheavy`
+- `cryptonightv7` or `monero`
+- `lbk3`
 - `lyra2v2`
 - `lyra2v2-old` (see the _Lyra2REv2 Issues_ item)
 - `lyra2z`
@@ -46,6 +57,7 @@ CryptoDredge -a <ALGO> -o stratum+tcp://<POOL> -u <WALLET_ADDRESS> -p <OPTIONS>
 - `phi2`
 - `skein`
 - `skunk`
+- `stellite`
 - `tribus`
 
 `-d`, `--device` List of comma-separated device IDs to use for mining. IDs are numbered `0,1`...,N - 1
@@ -109,7 +121,7 @@ CryptoDredge is not a piece of malicious software. You may try to add an excepti
 There are many reasons for rejected shares. The primary reasons are:
 - high network latency
 - overloaded mining server
-- aggresive graphics card overclocking
+- aggressive graphics card overclocking
 
 ### Watchdog
 
