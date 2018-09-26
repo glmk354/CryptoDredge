@@ -14,7 +14,9 @@ Developer fee is 1%
 - Blake (2s)
 - CryptoLightV7    (Aeon)
 - CryptoNightFast  (Masari)
+- CryptoNightHaven
 - CryptoNightHeavy
+- CryptoNightSaber (Bittube)
 - CryptoNightV7    (Monero)
 - Lbk3
 - Lyra2REv2
@@ -42,12 +44,14 @@ CryptoDredge -a <ALGO> -o stratum+tcp://<POOL> -u <WALLET_ADDRESS> -p <OPTIONS>
 `-v`, `--version` Print version information
 
 `-a`, `--algo` Specify algorithm to use
+- `aeon` (CryptoNight-Lite algorithm)
 - `allium`
 - `blake2s`
-- `cryptolightv7` or `aeon`
-- `cryptonightfast` or `masari`
-- `cryptonightheavy`
-- `cryptonightv7` or `monero`
+- `cnfast` (Masari)
+- `cnhaven`
+- `cnheavy`
+- `cnsaber` (BitTube)
+- `cnv7` (Monero)
 - `lbk3`
 - `lyra2v2`
 - `lyra2v2-old` (see the _Lyra2REv2 Issues_ item)
@@ -78,6 +82,8 @@ CryptoDredge -a <ALGO> -o stratum+tcp://<POOL> -u <WALLET_ADDRESS> -p <OPTIONS>
 
 `--no-watchdog` Force watchdog off
 
+`--no-crashreport` Force crash reporting off
+
 `--cpu-priority` Set process priority in the range 0 (low) to 5 (high) (default: `3`)
 
 `--api-type` Specify API type to use (default: `ccminer-tcp`)
@@ -92,6 +98,8 @@ CryptoDredge -a <ALGO> -o stratum+tcp://<POOL> -u <WALLET_ADDRESS> -p <OPTIONS>
 `-R`, `--retry-pause` N time to pause between retries, in seconds (default: `15`)
 
 `--timeout` N network timeout, in seconds (default: `30`)
+
+`-c`, `--config` JSON configuration file to use
 
 ## System Requirements
 
@@ -146,6 +154,16 @@ CryptoDredge -a lyra2v2-old -o stratum+tcp://<POOL> -u <WALLET_ADDRESS>
 ### Several Instances After a While
 
 It seems that you are using an own restart mechanism of CryptoDredge (see the _Watchdog_ item).
+
+### Crash Reporting
+
+If the built-in watchdog is enabled then CryptoDredge will generate and send us the report. You can disable error reporting with `--no-crashreport` option. Allowing CryptoDredge to send us automatic reports helps us prioritize what to fix and improve in the future versions.
+
+Crash reports won't include any personal information about you, but they might include:
+- Operating System version
+- Driver version
+- Miner configuration
+- Application crash data
 
 ## Contact
 
