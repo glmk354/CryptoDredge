@@ -11,19 +11,24 @@ Developer fee is 1%
 ## Supported Algorithms
 
 - Allium
+- BCD
 - Blake (2s)
+- C11
 - CryptoLightV7    (Aeon)
 - CryptoNightFast  (Masari)
 - CryptoNightHaven
 - CryptoNightHeavy
 - CryptoNightSaber (Bittube)
-- CryptoNightV7    (Monero)
+- CryptoNightV7
+- CryptoNightV8    (Monero)
+- Exosis
 - Lbk3
 - Lyra2REv2
 - Lyra2z
 - NeoScrypt
 - PHI1612
 - Phi2
+- Polytimos
 - Skein
 - Skunkhash
 - Stellite
@@ -46,12 +51,16 @@ CryptoDredge -a <ALGO> -o stratum+tcp://<POOL> -u <WALLET_ADDRESS> -p <OPTIONS>
 `-a`, `--algo` Specify algorithm to use
 - `aeon` (CryptoNight-Lite algorithm)
 - `allium`
+- `bcd`
 - `blake2s`
+- `c11`
 - `cnfast` (Masari)
 - `cnhaven`
 - `cnheavy`
 - `cnsaber` (BitTube)
-- `cnv7` (Monero)
+- `cnv7`
+- `cnv8` (Monero)
+- `exosis`
 - `lbk3`
 - `lyra2v2`
 - `lyra2v2-old` (see the _Lyra2REv2 Issues_ item)
@@ -59,6 +68,7 @@ CryptoDredge -a <ALGO> -o stratum+tcp://<POOL> -u <WALLET_ADDRESS> -p <OPTIONS>
 - `neoscrypt`
 - `phi`
 - `phi2`
+- `polytimos`
 - `skein`
 - `skunk`
 - `stellite`
@@ -68,7 +78,7 @@ CryptoDredge -a <ALGO> -o stratum+tcp://<POOL> -u <WALLET_ADDRESS> -p <OPTIONS>
 
 `-h`, `--help` Print help information
 
-`-i`, `--intensity` Mining intensity (0 - 6) (default: `6`)
+`-i`, `--intensity` Mining intensity (`0` - `6`). For example: `-i N[,N]` (default: `6`)
 
 `-o`, `--url` URL of mining pool
 
@@ -84,16 +94,16 @@ CryptoDredge -a <ALGO> -o stratum+tcp://<POOL> -u <WALLET_ADDRESS> -p <OPTIONS>
 
 `--no-crashreport` Force crash reporting off
 
-`--cpu-priority` Set process priority in the range 0 (low) to 5 (high) (default: `3`)
+`--cpu-priority` Set process priority in the range `0` (low) to `5` (high) (default: `3`)
 
 `--api-type` Specify API type to use (default: `ccminer-tcp`)
 - `ccminer-tcp` (TCP)
 - `ccminer-ws` (WebSocket)
 - `off`
 
-`-b`, `--api-bind` IP:port for the miner API, 0 disabled (default: `127.0.0.1:4068`)
+`-b`, `--api-bind` IP:port for the miner API, `0` disabled (default: `127.0.0.1:4068`)
 
-`-r`, `--retries` N number of times to retry if a network call fails, 0 retry indefinitely (default: `0`)
+`-r`, `--retries` N number of times to retry if a network call fails, `-1` retry indefinitely (default: `-1`)
 
 `-R`, `--retry-pause` N time to pause between retries, in seconds (default: `15`)
 
