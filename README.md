@@ -12,6 +12,7 @@ Developer fee is 1%
 
 - Allium
 - BCD
+- BitCore
 - Blake (2s)
 - C11
 - CryptoLightV7    (Aeon)
@@ -22,6 +23,7 @@ Developer fee is 1%
 - CryptoNightV7
 - CryptoNightV8    (Monero)
 - Exosis
+- HMQ1725
 - Lbk3
 - Lyra2REv2
 - Lyra2z
@@ -33,6 +35,8 @@ Developer fee is 1%
 - Skunkhash
 - Stellite
 - Tribus
+- X17
+- X22i
 
 ## QuickStart
 
@@ -52,6 +56,7 @@ CryptoDredge -a <ALGO> -o stratum+tcp://<POOL> -u <WALLET_ADDRESS> -p <OPTIONS>
 - `aeon` (CryptoNight-Lite algorithm)
 - `allium`
 - `bcd`
+- `bitcore`
 - `blake2s`
 - `c11`
 - `cnfast` (Masari)
@@ -61,6 +66,7 @@ CryptoDredge -a <ALGO> -o stratum+tcp://<POOL> -u <WALLET_ADDRESS> -p <OPTIONS>
 - `cnv7`
 - `cnv8` (Monero)
 - `exosis`
+- `hmq1725`
 - `lbk3`
 - `lyra2v2`
 - `lyra2v2-old` (see the _Lyra2REv2 Issues_ item)
@@ -73,6 +79,8 @@ CryptoDredge -a <ALGO> -o stratum+tcp://<POOL> -u <WALLET_ADDRESS> -p <OPTIONS>
 - `skunk`
 - `stellite`
 - `tribus`
+- `x17`
+- `x22i`
 
 `-d`, `--device` List of comma-separated device IDs to use for mining. IDs are numbered `0,1`...,N - 1
 
