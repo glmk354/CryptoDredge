@@ -22,20 +22,26 @@ Developer fee is 1%
 - CryptoNightSaber (Bittube)
 - CryptoNightV7
 - CryptoNightV8    (Monero)
+- Dedal
 - Exosis
 - HMQ1725
 - Lbk3
 - Lyra2REv2
+- Lyra2vc0banHash
 - Lyra2z
 - NeoScrypt
 - PHI1612
 - Phi2
+- Pipe
 - Polytimos
 - Skein
 - Skunkhash
 - Stellite
 - Tribus
+- X16R
+- X16S
 - X17
+- X21S
 - X22i
 
 ## QuickStart
@@ -65,21 +71,27 @@ CryptoDredge -a <ALGO> -o stratum+tcp://<POOL> -u <WALLET_ADDRESS> -p <OPTIONS>
 - `cnsaber` (BitTube)
 - `cnv7`
 - `cnv8` (Monero)
+- `dedal`
 - `exosis`
 - `hmq1725`
 - `lbk3`
-- `lyra2v2`
 - `lyra2v2-old` (see the _Lyra2REv2 Issues_ item)
+- `lyra2v2`
+- `lyra2vc0ban`
 - `lyra2z`
 - `neoscrypt`
-- `phi`
 - `phi2`
+- `phi`
+- `pipe`
 - `polytimos`
 - `skein`
 - `skunk`
 - `stellite`
 - `tribus`
+- `x16r`
+- `x16s`
 - `x17`
+- `x21s`
 - `x22i`
 
 `-d`, `--device` List of comma-separated device IDs to use for mining. IDs are numbered `0,1`...,N - 1
