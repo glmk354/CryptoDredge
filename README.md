@@ -27,6 +27,7 @@ Developer fee is 1%
 - HMQ1725
 - Lbk3
 - Lyra2REv2
+- Lyra2REv3
 - Lyra2vc0banHash
 - Lyra2z
 - NeoScrypt
@@ -75,8 +76,8 @@ CryptoDredge -a <ALGO> -o stratum+tcp://<POOL> -u <WALLET_ADDRESS> -p <OPTIONS>
 - `exosis`
 - `hmq1725`
 - `lbk3`
-- `lyra2v2-old` (see the _Lyra2REv2 Issues_ item)
 - `lyra2v2`
+- `lyra2v3`
 - `lyra2vc0ban`
 - `lyra2z`
 - `neoscrypt`
@@ -169,16 +170,6 @@ Example:
 
 ```
 CryptoDredge -a <ALGO> -o stratum+tcp://<POOL> -u <WALLET_ADDRESS> --no-watchdog
-```
-
-### Lyra2REv2 Issues
-
-In case if you have issues with the current implementation of Lyra2REv2 (`lyra2v2`), you might want to try `lyra2v2-old`.
-
-Example:
-
-```
-CryptoDredge -a lyra2v2-old -o stratum+tcp://<POOL> -u <WALLET_ADDRESS>
 ```
 
 ### Several Instances After a While
