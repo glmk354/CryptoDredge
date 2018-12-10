@@ -28,7 +28,7 @@ Developer fee is 1%
 - Lbk3
 - Lyra2REv2
 - Lyra2REv3
-- Lyra2vc0banHash
+- Lyra2vc0ban
 - Lyra2z
 - NeoScrypt
 - PHI1612
