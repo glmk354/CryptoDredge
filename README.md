@@ -6,7 +6,7 @@ CryptoDredge is a simple in use and highly optimized cryptocurrency mining softw
 
 ## Features
 
-Developer fee is 1%
+Developer fee is 1% (2% for MTP)
 
 ## Supported Algorithms
 
@@ -30,6 +30,7 @@ Developer fee is 1%
 - Lyra2REv3
 - Lyra2vc0ban
 - Lyra2z
+- MTP
 - NeoScrypt
 - PHI1612
 - Phi2
@@ -80,6 +81,7 @@ CryptoDredge -a <ALGO> -o stratum+tcp://<POOL> -u <WALLET_ADDRESS> -p <OPTIONS>
 - `lyra2v3`
 - `lyra2vc0ban`
 - `lyra2z`
+- `mtp`
 - `neoscrypt`
 - `phi2`
 - `phi`
@@ -130,7 +132,9 @@ CryptoDredge -a <ALGO> -o stratum+tcp://<POOL> -u <WALLET_ADDRESS> -p <OPTIONS>
 
 `--timeout` N network timeout, in seconds (default: `30`)
 
-`-c`, `--config` JSON configuration file to use
+`-c`, `--config` JSON configuration file to use (default: `config.json`)
+
+`--no-nvml` Force NVML off
 
 ## System Requirements
 
