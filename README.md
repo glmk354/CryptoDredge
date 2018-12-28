@@ -30,7 +30,7 @@ Developer fee is 1% (2% for MTP)
 - Lyra2REv3
 - Lyra2vc0ban
 - Lyra2z
-- MTP
+- MTP (see the "MTP Algorithm" item)
 - NeoScrypt
 - PHI1612
 - Phi2
@@ -153,7 +153,7 @@ CryptoDredge -a <ALGO> -o stratum+tcp://<POOL> -u <WALLET_ADDRESS> -p <OPTIONS>
 - Ubuntu 14.04+, Debian 8+ (64-bit versions)
 - Package libc-ares2. Installing libc-ares2 package is as easy as running the following command on terminal: `apt-get install libc-ares2`
 
-## Troubleshooting
+## Notes
 
 ### Antivirus Software Reports
 
@@ -189,6 +189,18 @@ Crash reports won't include any personal information about you, but they might i
 - Driver version
 - Miner configuration
 - Application crash data
+
+### MTP Algorithm
+
+System Requirements:
+- GPUs with at least 5 GB of memory
+- There are no special CPU and RAM requirements, 4 GB must be sufficient
+
+In comparison to other algorithms, MTP requires transferring large amounts of data to the pool. This may be a problem for limited and slow connections.
+
+The miner has to do some extra work every time that the pool sends a new "job", so an average hashrate will be a bit slow.
+
+Developer fee is 2% for MTP.
 
 ## Contact
 
