@@ -13,34 +13,35 @@ Developer fee is 1% (2% for MTP)
 - Allium
 - BCD
 - BitCore
-- Blake (2s)
 - C11
-- CryptoLightV7    (Aeon)
-- CryptoNightFast  (Masari)
+- CryptoLightV7 (Aeon)
+- CryptoNightFast
+- CryptoNightFastV2 (Masari and Stellite)
+- CryptoNightGPU
 - CryptoNightHaven
 - CryptoNightHeavy
 - CryptoNightSaber (Bittube)
+- CryptoNightSuperFast
+- CryptoNightTurtle
 - CryptoNightV7
-- CryptoNightV8    (Monero)
+- CryptoNightV8
+- Cuckaroo29 (Grin)
+- CuckooCycle (Aeternity)
 - Dedal
-- Exosis
 - HMQ1725
-- Lbk3
-- Lyra2REv2
 - Lyra2REv3
 - Lyra2vc0ban
 - Lyra2z
+- Lyra2zz (LAPO)
 - MTP (see the "MTP Algorithm" item)
 - NeoScrypt
 - PHI1612
 - Phi2
 - Pipe
-- Polytimos
-- Skein
 - Skunkhash
-- Stellite
 - Tribus
 - X16R
+- X16RT
 - X16S
 - X17
 - X21S
@@ -61,37 +62,38 @@ CryptoDredge -a <ALGO> -o stratum+tcp://<POOL> -u <WALLET_ADDRESS> -p <OPTIONS>
 `-v`, `--version` Print version information
 
 `-a`, `--algo` Specify algorithm to use
-- `aeon` (CryptoNight-Lite algorithm)
+- `aeon`
+- `aeternity`
 - `allium`
 - `bcd`
 - `bitcore`
-- `blake2s`
 - `c11`
-- `cnfast` (Masari)
+- `cnfast`
+- `cnfast2`
+- `cngpu`
 - `cnhaven`
 - `cnheavy`
-- `cnsaber` (BitTube)
+- `cnsaber`
+- `cnsuperfast`
+- `cnturtle`
 - `cnv7`
-- `cnv8` (Monero)
+- `cnv8`
+- `cuckaroo29`
 - `dedal`
-- `exosis`
 - `hmq1725`
-- `lbk3`
-- `lyra2v2`
 - `lyra2v3`
 - `lyra2vc0ban`
 - `lyra2z`
+- `lyra2zz`
 - `mtp`
 - `neoscrypt`
-- `phi2`
 - `phi`
+- `phi2`
 - `pipe`
-- `polytimos`
-- `skein`
 - `skunk`
-- `stellite`
 - `tribus`
 - `x16r`
+- `x16rt`
 - `x16s`
 - `x17`
 - `x21s`
@@ -130,7 +132,7 @@ CryptoDredge -a <ALGO> -o stratum+tcp://<POOL> -u <WALLET_ADDRESS> -p <OPTIONS>
 
 `-R`, `--retry-pause` N time to pause between retries, in seconds (default: `15`)
 
-`--timeout` N network timeout, in seconds (default: `30`)
+`--timeout` N network timeout, in seconds (default: `300`)
 
 `-c`, `--config` JSON configuration file to use (default: `config.json`)
 
