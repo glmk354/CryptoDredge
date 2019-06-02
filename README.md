@@ -201,7 +201,7 @@ Developer fee is 2% for MTP.
 
 ### Argon2d (NIM) Algorithm
 
-If you encounter many "invalid share: invalid pow" errors from the pool, set --hashrate option to calculate the start difficulty.
+If you encounter many "invalid share: invalid pow" errors from the pool, set `--hashrate` option to calculate the start difficulty.
 
 ## Contact
 
