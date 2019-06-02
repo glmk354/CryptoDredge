@@ -11,23 +11,19 @@ Developer fee is 1% (2% for MTP)
 ## Supported Algorithms
 
 - Allium
+- Argon2d (250/4096/DYN/NIM)
 - BCD
 - BitCore
-- C11
 - CryptoLightV7 (Aeon)
-- CryptoNightFast
 - CryptoNightFastV2 (Masari and Stellite)
 - CryptoNightGPU
 - CryptoNightHaven
 - CryptoNightHeavy
 - CryptoNightSaber (Bittube)
-- CryptoNightSuperFast
 - CryptoNightTurtle
-- CryptoNightV7
 - CryptoNightV8
 - Cuckaroo29 (Grin)
 - CuckooCycle (Aeternity)
-- Dedal
 - HMQ1725
 - Lyra2REv3
 - Lyra2vc0ban
@@ -35,7 +31,6 @@ Developer fee is 1% (2% for MTP)
 - Lyra2zz (LAPO)
 - MTP (see the "MTP Algorithm" item)
 - NeoScrypt
-- PHI1612
 - Phi2
 - Pipe
 - Skunkhash
@@ -65,21 +60,20 @@ CryptoDredge -a <ALGO> -o stratum+tcp://<POOL> -u <WALLET_ADDRESS> -p <OPTIONS>
 - `aeon`
 - `aeternity`
 - `allium`
+- `argon2d-dyn`
+- `argon2d-nim`
+- `argon2d250`
+- `argon2d4096`
 - `bcd`
 - `bitcore`
-- `c11`
-- `cnfast`
 - `cnfast2`
 - `cngpu`
 - `cnhaven`
 - `cnheavy`
 - `cnsaber`
-- `cnsuperfast`
 - `cnturtle`
-- `cnv7`
 - `cnv8`
 - `cuckaroo29`
-- `dedal`
 - `hmq1725`
 - `lyra2v3`
 - `lyra2vc0ban`
@@ -87,7 +81,6 @@ CryptoDredge -a <ALGO> -o stratum+tcp://<POOL> -u <WALLET_ADDRESS> -p <OPTIONS>
 - `lyra2zz`
 - `mtp`
 - `neoscrypt`
-- `phi`
 - `phi2`
 - `pipe`
 - `skunk`
@@ -137,6 +130,8 @@ CryptoDredge -a <ALGO> -o stratum+tcp://<POOL> -u <WALLET_ADDRESS> -p <OPTIONS>
 `-c`, `--config` JSON configuration file to use (default: `config.json`)
 
 `--no-nvml` Force NVML off
+
+`--hashrate` Expected hashrate in kh/s (argon2d-nim only) (default: 100)
 
 ## System Requirements
 
@@ -203,6 +198,10 @@ In comparison to other algorithms, MTP requires transferring large amounts of da
 The miner has to do some extra work every time that the pool sends a new "job", so an average hashrate will be a bit slow.
 
 Developer fee is 2% for MTP.
+
+### Argon2d (NIM) Algorithm
+
+If you encounter many "invalid share: invalid pow" errors from the pool, set --hashrate option to calculate the start difficulty.
 
 ## Contact
 
