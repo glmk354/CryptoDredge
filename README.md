@@ -14,7 +14,10 @@ Developer fee is 1% (2% for MTP)
 - Argon2d (250/4096/DYN/NIM)
 - BCD
 - BitCore
+- Chukwa (Argon2-512)
+- Chukwa WRKZ (Argon2-256)
 - CryptoLightV7 (Aeon)
+- CryptoNightConceal
 - CryptoNightFastV2 (Masari and Stellite)
 - CryptoNightGPU
 - CryptoNightHaven
@@ -66,6 +69,9 @@ CryptoDredge -a <ALGO> -o stratum+tcp://<POOL> -u <WALLET_ADDRESS> -p <OPTIONS>
 - `argon2d4096`
 - `bcd`
 - `bitcore`
+- `chukwa`
+- `chukwa-wrkz`
+- `cnconceal`
 - `cnfast2`
 - `cngpu`
 - `cnhaven`
@@ -103,6 +109,10 @@ CryptoDredge -a <ALGO> -o stratum+tcp://<POOL> -u <WALLET_ADDRESS> -p <OPTIONS>
 `-p`, `--pass` Password/Options for mining pool
 
 `-u`, `--user` Username for mining pool
+
+`-x`, `--proxy` Connecting through a proxy. Syntax: `protocol://[user:password@]proxyhost[:port]`. For example: `-x socks5://proxyuser:12345@127.0.0.1:1080`. Supported proxy types: Socks5 for TCP connections, HTTP for Websocket connections
+
+`--cert` Path to the mining pool server certificate file. Used for `stratum+ssl` connections, must contain the full certificate chain. If not specified, the server certificate is not verified, but the connection remains secure
 
 `--log` Log output to file
 
