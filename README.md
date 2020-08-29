@@ -12,38 +12,34 @@ Developer fee is 1% (2% for MTP)
 
 - Allium
 - Argon2d (250/4096/DYN/NIM)
-- BCD
-- BitCore
 - Chukwa (Argon2-512)
-- Chukwa WRKZ (Argon2-256)
-- CryptoLightV7 (Aeon)
 - CryptoNightConceal
 - CryptoNightFastV2 (Masari and Stellite)
 - CryptoNightGPU
 - CryptoNightHaven
 - CryptoNightHeavy
-- CryptoNightSaber (Bittube)
+- CryptoNightTLO
 - CryptoNightTurtle
-- CryptoNightV8
-- Cuckaroo29 (Grin)
+- CryptoNightUPX
+- CryptoNightZLS
 - CuckooCycle (Aeternity)
 - HMQ1725
 - Lyra2REv3
 - Lyra2vc0ban
 - Lyra2z
-- Lyra2zz (LAPO)
 - MTP (see the "MTP Algorithm" item)
+- MTP-TCR
 - NeoScrypt
+- Ninja (Argon2-256)
 - Phi2
-- Pipe
 - Skunkhash
 - Tribus
 - X16R
 - X16RT
+- X16RV2
 - X16S
 - X17
 - X21S
-- X22i
 
 ## QuickStart
 
@@ -60,49 +56,46 @@ CryptoDredge -a <ALGO> -o stratum+tcp://<POOL> -u <WALLET_ADDRESS> -p <OPTIONS>
 `-v`, `--version` Print version information
 
 `-a`, `--algo` Specify algorithm to use
-- `aeon`
 - `aeternity`
 - `allium`
 - `argon2d-dyn`
 - `argon2d-nim`
 - `argon2d250`
 - `argon2d4096`
-- `bcd`
-- `bitcore`
 - `chukwa`
-- `chukwa-wrkz`
 - `cnconceal`
 - `cnfast2`
 - `cngpu`
 - `cnhaven`
 - `cnheavy`
-- `cnsaber`
+- `cntlo`
 - `cnturtle`
-- `cnv8`
-- `cuckaroo29`
+- `cnupx2`
+- `cnzls`
 - `hmq1725`
 - `lyra2v3`
 - `lyra2vc0ban`
 - `lyra2z`
-- `lyra2zz`
 - `mtp`
+- `mtp-tcr`
 - `neoscrypt`
+- `ninja`
 - `phi2`
-- `pipe`
+- `sha256csm`
 - `skunk`
 - `tribus`
 - `x16r`
 - `x16rt`
+- `x16rv2`
 - `x16s`
 - `x17`
 - `x21s`
-- `x22i`
 
 `-d`, `--device` List of comma-separated device IDs to use for mining. IDs are numbered `0,1`...,N - 1
 
 `-h`, `--help` Print help information
 
-`-i`, `--intensity` Mining intensity (`0` - `6`). For example: `-i N[,N]` (default: `6`)
+`-i`, `--intensity` Mining intensity (`0.0` - `8.0`). For example: `-i N[,N]` (default: `6`)
 
 `-o`, `--url` URL of mining pool
 
@@ -113,6 +106,8 @@ CryptoDredge -a <ALGO> -o stratum+tcp://<POOL> -u <WALLET_ADDRESS> -p <OPTIONS>
 `-x`, `--proxy` Connecting through a proxy. Syntax: `protocol://[user:password@]proxyhost[:port]`. For example: `-x socks5://proxyuser:12345@127.0.0.1:1080`. Supported proxy types: Socks5 for TCP connections, HTTP for Websocket connections
 
 `--cert` Path to the mining pool server certificate file. Used for `stratum+ssl` connections, must contain the full certificate chain. If not specified, the server certificate is not verified, but the connection remains secure
+
+`--sni` Enable SNI (Server Name Indication) for `stratum+ssl` connections
 
 `--log` Log output to file
 
@@ -125,8 +120,8 @@ CryptoDredge -a <ALGO> -o stratum+tcp://<POOL> -u <WALLET_ADDRESS> -p <OPTIONS>
 `--cpu-priority` Set process priority in the range `0` (low) to `5` (high) (default: `3`)
 
 `--api-type` Specify API type to use (default: `ccminer-tcp`)
-- `ccminer-tcp` (TCP)
-- `ccminer-ws` (WebSocket)
+- `ccminer-tcp` (ccminer 2.3 TCP)
+- `ccminer-ws` (ccminer 2.3 WebSocket)
 - `off`
 
 `-b`, `--api-bind` IP:port for the miner API, `0` disabled (default: `127.0.0.1:4068`)
@@ -141,7 +136,11 @@ CryptoDredge -a <ALGO> -o stratum+tcp://<POOL> -u <WALLET_ADDRESS> -p <OPTIONS>
 
 `--no-nvml` Force NVML off
 
-`--hashrate` Expected hashrate in kh/s (argon2d-nim only) (default: 100)
+`--hashrate` Expected hashrate in kh/s (argon2d-nim only) (default: `100`)
+
+`--optimizer` Run optimizer, currently for argon2d-nim only (default: `auto`)
+- `auto` (Run if gpu.json does not exist)
+- `force` (Run always ignoring gpu.json)
 
 ## System Requirements
 
@@ -157,8 +156,8 @@ CryptoDredge -a <ALGO> -o stratum+tcp://<POOL> -u <WALLET_ADDRESS> -p <OPTIONS>
 
 ### Linux
 
-- Ubuntu 14.04+, Debian 8+ (64-bit versions)
-- Package libc-ares2. Installing libc-ares2 package is as easy as running the following command on terminal: `apt-get install libc-ares2`
+- Ubuntu 16.04+, Debian 9.0+ (64-bit versions)
+- Package libc-ares2. Installing libc-ares2 package is as easy as running the following command on terminal: `sudo apt install libc-ares2`
 
 ## Notes
 
