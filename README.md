@@ -10,9 +10,9 @@ Developer fee is 1% (2% for MTP)
 
 ## Supported Algorithms
 
-- Allium
 - Argon2d (250/4096/DYN/NIM)
 - Chukwa (Argon2-512)
+- Chukwa-v2
 - CryptoNightConceal
 - CryptoNightFastV2 (Masari and Stellite)
 - CryptoNightGPU
@@ -22,24 +22,10 @@ Developer fee is 1% (2% for MTP)
 - CryptoNightTurtle
 - CryptoNightUPX
 - CryptoNightZLS
-- CuckooCycle (Aeternity)
-- HMQ1725
-- Lyra2REv3
-- Lyra2vc0ban
-- Lyra2z
+- KawPow
 - MTP (see the "MTP Algorithm" item)
 - MTP-TCR
-- NeoScrypt
 - Ninja (Argon2-256)
-- Phi2
-- Skunkhash
-- Tribus
-- X16R
-- X16RT
-- X16RV2
-- X16S
-- X17
-- X21S
 
 ## QuickStart
 
@@ -56,13 +42,12 @@ CryptoDredge -a <ALGO> -o stratum+tcp://<POOL> -u <WALLET_ADDRESS> -p <OPTIONS>
 `-v`, `--version` Print version information
 
 `-a`, `--algo` Specify algorithm to use
-- `aeternity`
-- `allium`
 - `argon2d-dyn`
 - `argon2d-nim`
 - `argon2d250`
 - `argon2d4096`
 - `chukwa`
+- `chukwa2`
 - `cnconceal`
 - `cnfast2`
 - `cngpu`
@@ -72,24 +57,10 @@ CryptoDredge -a <ALGO> -o stratum+tcp://<POOL> -u <WALLET_ADDRESS> -p <OPTIONS>
 - `cnturtle`
 - `cnupx2`
 - `cnzls`
-- `hmq1725`
-- `lyra2v3`
-- `lyra2vc0ban`
-- `lyra2z`
+- `kawpow`
 - `mtp`
 - `mtp-tcr`
-- `neoscrypt`
 - `ninja`
-- `phi2`
-- `sha256csm`
-- `skunk`
-- `tribus`
-- `x16r`
-- `x16rt`
-- `x16rv2`
-- `x16s`
-- `x17`
-- `x21s`
 
 `-d`, `--device` List of comma-separated device IDs to use for mining. IDs are numbered `0,1`...,N - 1
 
@@ -140,24 +111,27 @@ CryptoDredge -a <ALGO> -o stratum+tcp://<POOL> -u <WALLET_ADDRESS> -p <OPTIONS>
 
 `--optimizer` Run optimizer, currently for argon2d-nim only (default: `auto`)
 - `auto` (Run if gpu.json does not exist)
-- `force` (Run always ignoring gpu.json)
+- `force` (Run always)
+- `off`
+
+`--temperature-limit` GPU limit temperature, `0` disabled (default: `0`)
+
+`--temperature-start` GPU resume temperature, `0` disabled (default: `0`)
 
 ## System Requirements
 
 - <span style="color:#76b900">NVIDIA</span> GPUs with Compute Capability 5.0 or above
 - Latest GeForce driver
-- 2 GB RAM (4 GB recommended). Some algorithms such as NeoScrypt require the virtual memory (swap file) with the same size as all of the GPU's memory.
+- 2 GB RAM (4 GB recommended). Some algorithms require the virtual memory (swap file) with the same size as all of the GPU's memory.
 - Internet connection
 
 ### Windows
 
 - Windows 7/8.1/10 (64-bit versions)
-- [Visual C++ Redistributable for Visual Studio 2015](https://www.microsoft.com/en-US/download/details.aspx?id=48145)
 
 ### Linux
 
 - Ubuntu 16.04+, Debian 9.0+ (64-bit versions)
-- Package libc-ares2. Installing libc-ares2 package is as easy as running the following command on terminal: `sudo apt install libc-ares2`
 
 ## Notes
 
@@ -206,8 +180,6 @@ In comparison to other algorithms, MTP requires transferring large amounts of da
 
 The miner has to do some extra work every time that the pool sends a new "job", so an average hashrate will be a bit slow.
 
-Developer fee is 2% for MTP.
-
 ### Argon2d (NIM) Algorithm
 
 If you encounter many "invalid share: invalid pow" errors from the pool, set `--hashrate` option to calculate the start difficulty.
@@ -219,3 +191,7 @@ If you have problems, questions, ideas or suggestions, please contact us by post
 ## Web Site
 
 Visit the CryptoDredge web site for the latest news and downloads: [https://cryptodredge.org/](https://cryptodredge.org/)
+
+## Releases
+
+https://github.com/technobyl/CryptoDredge/releases
